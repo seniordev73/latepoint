@@ -1,0 +1,34 @@
+{
+  "agent_menu": [
+    {
+      "url": "agent/dashboard",
+      "name": "Dashboard",
+      "icon": "menu-icon tf-icons bx bx-pie-chart-alt-2",
+      "slug": "dashboard"
+    },
+    {
+      "url": "agent/calendar",
+      "name": "Calendar",
+      "icon": "menu-icon tf-icons bx bx-calendar",
+      "slug": "pages-calendar"
+    },
+    {
+      "url": "agent/appointments",
+      "name": "Appointment",
+      "icon": "menu-icon tf-icons bx bx-box",
+      "slug": "pages-appointment"
+    },
+    {
+      "url": "agent/payments",
+      "name": "Payments",
+      "icon": "menu-icon tf-icons bx bx-credit-card",
+      "slug": "pages-payments"
+    },
+    {
+      "url": "agent/customers",
+      "name": "Customers",
+      "icon": "menu-icon tf-icons bx bx-user",
+      "slug": "pages-customers"
+    }
+  ]
+}

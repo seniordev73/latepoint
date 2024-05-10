@@ -1,0 +1,222 @@
+    .service_title {
+        border-bottom: 5px solid #696cff;
+    }   
+    .card-header {
+        border-bottom: 1px solid #c5c5c5;
+    }
+    .index-agent-boxes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 30px;
+    }
+    .percent_val {
+        padding-left: 0 !important;
+    }
+    .agent-box-w:nth-child(1), .index-agent-boxes .create-agent-link-w:nth-child(1) {
+        animation: .4s cubic-bezier(.45,1.2,.8,1) 0ms wizardWrapperAnimation;
+        animation-fill-mode: both;
+    }
+    .agent-box-w {
+        background-color: #fff;
+        box-shadow: 0 5px 15px -5px rgba(115, 125, 146, .11), 0 1px 2px 0 rgba(160, 170, 185, .6);
+        padding: 20px 25px;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        text-decoration: none;
+        display: block;
+        border-radius: 6px;
+    }
+    .agent-box-w:hover {
+        border-color: #2652e4;
+        border-style: solid;
+    }
+
+    .agent-info-w .agent-info {
+        text-align: left;
+        flex: 1;
+    }
+    .agent-name {
+        font-weight: 500;
+        color: #1b3164;
+        font-size: 20px;
+        transition: all .2s ease;
+        margin-bottom: 3px;
+    }
+    .agent-phone {
+        color: #8e99bd;
+        font-size: 14px;
+    }
+    .agent-connection-icon {
+        display: inline-block;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    .agent-connection-icon img {
+        height: 16px;
+        width: auto;
+        display: inline-block;
+    }
+    .agent-info-w {
+        display: flex;
+        border-bottom: 1px solid #f0f1f5;
+        align-items: center;
+        padding-bottom: 15px;
+    }
+    .agent-schedule {
+        display: flex;
+        padding: 15px 0;
+        border-bottom: 1px solid #f0f1f5;
+    }
+
+    .agent-schedule .schedule-day {
+        position: relative;
+        flex: 1;
+        text-align: center;
+        padding-top: 15px;
+        font-size: 11px;
+        color: #d4d5e1;
+    }
+    .agent-schedule .schedule-day.is-on:before {
+        background-color: #59d193;
+    }
+    .agent-schedule .schedule-day:before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 10px;
+        background-color: #d4d5e1;
+        transform-origin: center center;
+        transition: transform .2s ease;
+    }
+    .agent-schedule-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .agent-schedule-info .agent-today-info {
+        color: #8e99bd;
+        font-size: 14px;
+        text-align: left;
+        padding-top: 15px;
+    }
+    .agent-schedule-info .today-bookings {
+        color: #8e99bd;
+        font-size: 14px;
+        border-left: 1px solid #f0f1f5;
+        padding: 15px 0 0 15px;
+    }
+    .agent-schedule-info .agent-today-info .today-status {
+        border-radius: 6px;
+        display: inline-block;
+        padding: 2px 5px;
+        color: #fff;
+        background-color: #85d7ad;
+        font-size: 12px;
+        margin-left: 4px;
+    }
+    .agent-schedule-info .agent-today-info .today-schedule {
+        font-weight: 500;
+        color: #1b3164;
+        font-size: 14px;
+        margin-top: 4px;
+    }
+    .agent-schedule-info .agent-today-info .today-schedule span {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .agent-schedule-info .today-bookings-count {
+        font-weight: 500;
+        color: #1b3164;
+        font-size: 20px;
+        margin-top: 4px;
+    }
+    .create-agent-link-w:hover {
+        border-color: #2652e4;
+        border-style: solid;
+    }
+
+    .agent-box-w:nth-child(5), .index-agent-boxes .create-agent-link-w:nth-child(5) {
+        animation: .4s cubic-bezier(.45,1.2,.8,1) 120ms wizardWrapperAnimation;
+        animation-fill-mode: both;
+    }
+
+    .create-agent-link-w .add-agent-graphic-w .add-agent-plus, .create-agent-link-w .create-agent-link-i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    .create-agent-link-w .add-agent-graphic-w {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .create-agent-link-w {
+        border: 4px dotted rgba(0, 0, 0, .1);
+        border-radius: 6px;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        display: block;
+        outline: 0;
+        box-shadow: none;
+        min-height: 150px;
+    }
+    .create-agent-link-w .add-agent-label {
+        color: #2652e4;
+        font-weight: 500;
+        font-size: 19px;
+        margin-top: 5px;
+        transition: all .2s cubic-bezier(.25,1.4,.5,1.35);
+    }
+    .create-agent-link-w .add-agent-graphic-w .add-agent-plus {
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        background-color: #2652e4;
+        box-shadow: 0 0 0 15px rgba(208, 213, 220, .3);
+        color: #fff;
+        transition: all .2s cubic-bezier(.25,1.4,.5,1.35);
+    }
+    .create-agent-link-w .add-agent-graphic-w .add-agent-plus i {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        font-size: 12px;
+        transform: translate(-45%, -47%);
+        transition: all .2s ease;
+    }
+
+    .os-location-agents {
+        padding: 15px 20px;
+    }
+
+    .os-location-agents .label {
+        font-weight: 500;
+        text-align: left;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+    .os-location-agents .agents-avatars {
+        position: relative;
+        display: flex;
+    }
+    .os-location-agents .agents-avatars .agent-avatar {
+        width: 35px;
+        height: 35px;
+        display: block;
+        background-size: cover;
+        border-radius: 30px;
+        box-shadow: 0px 0px 0px 3px #fff;
+    }
+    .os-location-agents .agents-avatars .agent-avatar + .agent-avatar {
+        margin-left: -5px;
+    }

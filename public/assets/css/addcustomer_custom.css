@@ -1,0 +1,41 @@
+.card-header {
+    border-bottom: 1px solid #f0f1f5;
+}
+
+.card-body {
+    padding-top: 25px! important;
+}
+
+.form-control {
+    border: none;
+    border-bottom: var(--bs-border-width) solid #d9dee3;
+    border-radius: 0px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.dz-message  {
+    font-size: 18px;
+    text-align: left;
+    margin: 0px;
+}
+
+.bxs-tennis-ball {
+    font-size: 36px;
+    margin-right: 20px;
+}
+
+.iti {
+    width: 100%;
+}
+
+.edit-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.id_search {
+    width: 40px;
+}

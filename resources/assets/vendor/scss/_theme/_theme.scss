@@ -1,0 +1,160 @@
+// ? Theme related styles common styles
+
+@import '../_components/include';
+
+// Space above detached navbar (vertical layout only)
+.layout-navbar-fixed .layout-wrapper:not(.layout-horizontal) .layout-page:before {
+  content: '';
+  width: 100%;
+  height: 4.75rem;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+}
+
+.bg-menu-theme {
+  // Menu header
+  .menu-header {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 1.1875rem;
+      width: 1rem;
+      height: 1px;
+      transition: all $menu-animation-duration ease-in-out;
+      @include rtl-style {
+        right: 0;
+      }
+    }
+  }
+
+  .menu-inner .menu-item .menu-link {
+    .layout-wrapper:not(.layout-horizontal) & {
+      border-radius: $border-radius;
+    }
+  }
+  .menu-inner > .menu-item > .menu-link {
+    .layout-horizontal & {
+      border-radius: $border-radius;
+    }
+  }
+
+  .menu-inner > {
+    // Spacing and Box-shadow only for horizontal menu above lg screen
+    @include media-breakpoint-up(xl) {
+      .menu-item {
+        .layout-horizontal & {
+          margin: $menu-horizontal-link-padding-y 0;
+          &:not(:first-child) {
+            margin-left: $menu-item-spacer;
+          }
+          &:not(:last-child) {
+            margin-right: $menu-item-spacer;
+          }
+          .menu-sub {
+            box-shadow: $menu-horizontal-menu-box-shadow;
+            z-index: 1;
+          }
+        }
+      }
+    }
+    .menu-item.active:before {
+      .layout-wrapper:not(.layout-horizontal) & {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 0.25rem;
+        height: 2.6845rem;
+        border-radius: $border-radius 0 0 $border-radius;
+        @include rtl-style {
+          left: 0;
+          right: inherit;
+          border-radius: 0 $border-radius $border-radius 0;
+        }
+      }
+    }
+  }
+
+  // Sub menu item link bullet
+  .menu-sub > .menu-item > .menu-link:before {
+    content: '';
+    position: absolute;
+    left: 1.4375rem;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+    @include rtl-style {
+      right: 1.4375rem;
+      left: inherit;
+    }
+    // For horizontal layout
+    .layout-horizontal & {
+      left: 1.3rem;
+      @include rtl-style {
+        right: 1.3rem;
+        left: inherit;
+      }
+    }
+  }
+  // ? Hide bullet from first child only as we display icon instead (horizontal)
+  .menu-horizontal-wrapper > .menu-inner > .menu-item > .menu-sub > .menu-item > .menu-link:before {
+    display: none;
+  }
+  // Sub menu item link active bullet
+  .menu-sub > .menu-item.active > .menu-link:not(.menu-toggle):before {
+    left: 1.1875rem;
+    width: 0.875rem;
+    height: 0.875rem;
+    @include rtl-style {
+      right: 1.1875rem;
+      left: inherit;
+    }
+    // For horizontal layout
+    .layout-horizontal & {
+      left: 1.1rem;
+      @include rtl-style {
+        right: 1.1rem;
+        left: inherit;
+      }
+    }
+  }
+}
+
+.layout-menu-hover .layout-menu {
+  box-shadow: $box-shadow-lg;
+  transition: all $menu-animation-duration ease-in-out;
+}
+
+.app-brand .layout-menu-toggle {
+  position: absolute;
+  left: $menu-width - 1.25rem;
+  border-radius: 50%;
+  opacity: 1;
+  @include rtl-style {
+    left: inherit;
+    right: $menu-width - 1.25rem;
+  }
+  i {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: all $menu-animation-duration ease-in-out;
+    line-height: 1.05;
+    @include rtl-style {
+      transform: scaleX(-1);
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    display: none;
+    .layout-menu-expanded & {
+      display: block;
+    }
+  }
+}
+
+.menu-vertical {
+  .menu-item {
+    position: relative;
+  }
+}

@@ -1,0 +1,149 @@
+    .card-header {
+        border-bottom: 1px solid #f0f1f5;
+    }
+    .card-header-11 {
+        border-bottom: 1px solid #f0f1f5;
+    }
+    .card-body {
+        padding-top: 24px!important;
+    }
+    .latepoint-message.latepoint-message-subtle {
+        padding: 10px 15px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        background: #f9f9f9;
+        color: #8e99bd;
+        border: 2px solid #e7e7ef;
+    }
+    .latepoint-message {
+        border-radius: 6px;
+    }
+    .highlight {
+        color : blue;
+    }
+    .ws-head-w {
+        border-bottom: 1px solid #f0f1f5;
+        margin-top: 1%;
+    }
+
+
+
+    .custom-day-work-periods {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .custom-day-work-period {
+        margin: 0 15px 15px 0;
+        transition: all .2s ease;
+    }
+    .add-custom-day-w, .custom-day-work-period {
+        width: 140px;
+        flex: 0 0 140px;
+        text-align: center;
+        position: relative;
+    }
+    .custom-day-work-period .custom-day-work-period-i {
+        position: relative;
+        padding: 24px 20px;
+        border: 1px solid #e1e3ea;
+        border-radius: 6px;
+        background-color: #fff;
+        transition: all .2s ease;
+    }
+    .custom-day-work-period .custom-day-periods {
+        padding-top: 10px;
+    }
+    .custom-day-work-period .custom-day-work-period-i:before {
+        top: 50%;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .05);
+        height: 1px;
+        position: absolute;
+        content: "";
+    }
+    .custom-day-work-period .custom-day-number {
+        font-size: 46px;
+        font-weight: 500;
+        line-height: 1;
+        margin-bottom: 5px;
+        color: #2652e4;
+    }
+    .custom-day-work-period .custom-day-month {
+        font-size: 19.2px;
+        line-height: 1;
+        color: #9da8d5;
+    }
+    .add-custom-day-w {
+        border: 3px dotted rgba(0, 0, 0, .1);
+        margin-right: 15px;
+        cursor: pointer;
+        display: block;
+        outline: 0;
+        box-shadow: none;
+        min-height: 115px;
+        border-radius: 6px;
+    }
+    .add-custom-day-w, .custom-day-work-period {
+        width: 140px;
+        flex: 0 0 140px;
+        text-align: center;
+        position: relative;
+    }
+    .add-custom-day-w .add-custom-day-i, .add-custom-day-w .add-day-plus i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .add-custom-day-w .add-day-graphic-w {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .add-custom-day-w .add-day-plus {
+        height: 24px;
+        width: 24px;
+        background-color: #2652e4;
+        box-shadow: 0 0 0 10px rgba(208, 213, 220, .3);
+        color: #fff;
+        transition: all .2s cubic-bezier(.25,1.4,.5,1.35);
+    }
+    .add-custom-day-w .add-day-plus, .add-custom-day-w.os-loading .add-day-plus:after {
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .add-custom-day-w .add-day-plus i {
+        display: block;
+        font-size: 10px;
+        transform: translate(-45%, -47%);
+        transition: all .2s ease;
+    }
+    .add-custom-day-w .add-custom-day-i, .add-custom-day-w .add-day-plus i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .latepoint-icon-plus4:before {
+        content: "";
+    }
+    .add-custom-day-w .add-day-plus i {
+        display: block;
+        font-size: 10px;
+        transform: translate(-45%, -47%);
+        transition: all .2s ease;
+    }
+    .add-custom-day-w .add-day-label {
+        color: #2652e4;
+        font-weight: 500;
+        font-size: 19.2px;
+        margin-top: 5px;
+        white-space: nowrap;
+        transition: all .2s cubic-bezier(.25,1.4,.5,1.35);
+    }

@@ -1,0 +1,392 @@
+    .service_title {
+        border-bottom: 5px solid #696cff;
+    }   
+
+    .card-header {
+        border-bottom: 1px solid #c5c5c5;
+    }
+
+    .index-agent-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    .percent_val {
+        padding-left: 0 !important;
+    }
+    .agent-box-w:nth-child(1), .index-agent-boxes .create-agent-link-w:nth-child(1) {
+        animation: .4s cubic-bezier(.45,1.2,.8,1) 0ms wizardWrapperAnimation;
+        animation-fill-mode: both;
+    }
+    .agent-box-w {
+        background-color: #fff;
+        box-shadow: 0 5px 15px -5px rgba(115, 125, 146, .11), 0 1px 2px 0 rgba(160, 170, 185, .6);
+        padding: 20px 25px;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        text-decoration: none;
+        display: block;
+        border-radius: 6px;
+    }
+    .agent-box-w:hover {
+        border-color: #2652e4;
+        border-style: solid;
+    }
+
+    .agent-info-w .agent-info {
+        text-align: center;
+        flex: 1;
+    }
+    .agent-name {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0px;
+        color: #2D303A;
+    }
+    .agent-phone {
+        color: #8e99bd;
+        font-size: 14px;
+    }
+    .agent-connection-icon {
+        display: inline-block;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    .agent-connection-icon img {
+        height: 16px;
+        width: auto;
+        display: inline-block;
+    }
+    .agent-info-w {
+        display: flex;
+        border-bottom: 1px solid #f0f1f5;
+        align-items: center;
+        padding-bottom: 15px;
+    }
+    .agent-schedule {
+        display: flex;
+        padding: 15px 0;
+        border-bottom: 1px solid #f0f1f5;
+    }
+
+    .agent-schedule .schedule-day {
+        position: relative;
+        flex: 1;
+        text-align: center;
+        padding-top: 15px;
+        font-size: 11px;
+        color: #d4d5e1;
+    }
+    .agent-schedule .schedule-day.is-on:before {
+        background-color: #59d193;
+    }
+    .agent-schedule .schedule-day:before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 10px;
+        background-color: #d4d5e1;
+        transform-origin: center center;
+        transition: transform .2s ease;
+    }
+    .agent-schedule-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .agent-schedule-info .agent-today-info {
+        color: #8e99bd;
+        font-size: 14px;
+        text-align: left;
+        padding-top: 15px;
+    }
+    .agent-schedule-info .today-bookings {
+        color: #8e99bd;
+        font-size: 14px;
+        border-left: 1px solid #f0f1f5;
+        padding: 15px 0 0 15px;
+    }
+    .agent-schedule-info .agent-today-info .today-status {
+        border-radius: 6px;
+        display: inline-block;
+        padding: 2px 5px;
+        color: #fff;
+        background-color: #85d7ad;
+        font-size: 12px;
+        margin-left: 4px;
+    }
+    .agent-schedule-info .agent-today-info .today-schedule {
+        font-weight: 500;
+        color: #1b3164;
+        font-size: 14px;
+        margin-top: 4px;
+    }
+    .agent-schedule-info .agent-today-info .today-schedule span {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .agent-schedule-info .today-bookings-count {
+        font-weight: 500;
+        color: #1b3164;
+        font-size: 20px;
+        margin-top: 4px;
+    }
+    .create-agent-link-w:hover {
+        border-color: #2652e4;
+        border-style: solid;
+    }
+
+    .agent-box-w:nth-child(5), .index-agent-boxes .create-agent-link-w:nth-child(5) {
+        animation: .4s cubic-bezier(.45,1.2,.8,1) 120ms wizardWrapperAnimation;
+        animation-fill-mode: both;
+    }
+
+    .create-agent-link-w .add-agent-graphic-w .add-agent-plus, .create-agent-link-w .create-agent-link-i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    .create-agent-link-w .add-agent-graphic-w {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .create-agent-link-w {
+        border: 4px dotted rgba(0, 0, 0, .1);
+        border-radius: 6px;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        display: block;
+        outline: 0;
+        box-shadow: none;
+        min-height: 150px;
+    }
+    .create-agent-link-w .add-agent-label {
+        color: #2652e4;
+        font-weight: 500;
+        font-size: 19px;
+        margin-top: 5px;
+        transition: all .2s cubic-bezier(.25,1.4,.5,1.35);
+    }
+    .create-agent-link-w .add-agent-graphic-w .add-agent-plus {
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        background-color: #2652e4;
+        box-shadow: 0 0 0 15px rgba(208, 213, 220, .3);
+        color: #fff;
+        transition: all .2s cubic-bezier(.25,1.4,.5,1.35);
+    }
+    .create-agent-link-w .add-agent-graphic-w .add-agent-plus i {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        font-size: 12px;
+        transform: translate(-45%, -47%);
+        transition: all .2s ease;
+    }
+/*
+    .os-location-agents {
+        padding: 15px 20px;
+    }
+
+    .os-location-agents .label {
+        font-weight: 500;
+        text-align: left;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+    .os-location-agents .agents-avatars {
+        position: relative;
+        display: flex;
+    }
+    .os-location-agents .agents-avatars .agent-avatar {
+        width: 35px;
+        height: 35px;
+        display: block;
+        background-size: cover;
+        border-radius: 30px;
+        box-shadow: 0px 0px 0px 3px #fff;
+    }
+    .os-location-agents .agents-avatars .agent-avatar + .agent-avatar {
+        margin-left: -5px;
+    }*/
+
+
+    .os-form-sub-header.sub-level {
+        border-bottom-color: #dbe3fb;
+        border: none;
+        text-align: center;
+        position: relative;
+        padding: 0px;
+    }
+    .os-form-sub-header {
+        border-bottom: 5px solid #f1f4fb;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        margin-top: 0px;
+        margin-top: 20px;
+        padding-left: 0px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .os-form-sub-header.sub-level h3 {
+        background-color: #f5f5f9;
+        color: #9DA8D5;
+        font-size: 19px;
+        position: relative;
+        padding: 0px 10px 0px 0px;
+        z-index: 2;
+    }
+    .os-form-sub-header h3 {
+        font-size: 20px;
+        font-family: "Barlow", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 500;
+        color: #2D303A;
+        margin: 0px;
+        padding: 0px;
+    }
+    .os-form-sub-header.sub-level:after {
+        position: absolute;
+        content: "";
+        left: 0px;
+        right: 0px;
+        top: 50%;
+        height: 5px;
+        background-color: #b8c5ef;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    
+    .os-service-body .os-service-agents {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: center;
+    }
+    .os-service-body .os-service-agents .label, .os-service-body .os-service-info .label {
+        flex: 0 0 50%;
+        color: #929cb3;
+        font-weight: 500;
+        text-align: right;
+        padding-right: 10px;
+    }
+    .os-service-body .os-service-agents .agents-avatars {
+        flex: 1;
+        position: relative;
+        display: flex;
+    }
+    .os-service-body .os-service-agents .agents-avatars .agent-avatar {
+        width: 30px;
+        height: 30px;
+        display: block;
+        background-size: cover;
+        border-radius: 30px;
+        box-shadow: 0px 0px 0px 3px #fff;
+    }
+    .os-service-body .os-service-info {
+        padding: 15px;
+    }
+    .os-service-body .service-info-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    .os-service-body .os-service-info .label {
+        flex: 0 0 50%;
+        color: #929cb3;
+        font-weight: 500;
+        text-align: right;
+        padding-right: 10px;
+    }
+    .os-service-body .os-service-info .value {
+        flex: 1;
+        color: #929cb3;
+    }
+    .os-service-body .os-service-info .value strong {
+        color: #38406d;
+    }
+    .create-service-link-w {
+        border: 4px dotted rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin-bottom: 30px;
+        margin-right: 30px;
+        width: 220px;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        display: block;
+        outline: none;
+        box-shadow: none;
+        min-height: 200px;
+        align-self: stretch;
+    }
+    .latepoint-admin a {
+        color: #2652E4;
+        font-weight: 500;
+        outline: none;
+    }
+    .create-service-link-w .create-service-link-i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .create-service-link-w .add-service-graphic-w {
+        width: 90px;
+        height: 90px;
+        position: relative;
+        margin: 0px auto;
+    }
+    .create-service-link-w .add-service-graphic-w .add-service-plus {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        background-color: #2652E4;
+        box-shadow: 0px 0px 0px 10px rgba(208, 213, 220, 0.3);
+        color: #fff;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s cubic-bezier(0.25, 1.4, 0.5, 1.35);
+    }
+    .create-service-link-w .add-service-graphic-w .add-service-plus i {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        font-size: 12px;
+        transform: translate(-45%, -47%);
+        transition: all 0.2s ease;
+    }
+    .create-service-link-w .add-service-label {
+        color: #2652E4;
+        font-weight: 500;
+        font-size: 19.2px;
+        margin-top: 20px;
+        transition: all 0.2s cubic-bezier(0.25, 1.4, 0.5, 1.35);
+    }
+    .os-service {
+        background-color: #fff;
+        box-shadow: 0 5px 15px -5px rgba(115, 125, 146, 0.11), 0 1px 2px 0 rgba(160, 170, 185, 0.6);
+        border-radius: 6px;
+        margin-bottom: 30px;
+        margin-right: 30px;
+        width: 220px;
+    }
+    .create-service-link-w:hover {
+        border-color: #2652E4;
+        border-style: solid;
+    }

@@ -1,0 +1,27 @@
+    .card-header {
+        border-bottom: 1px solid #f0f1f5;
+    }
+    .card-header-11 {
+        border-bottom: 1px solid #f0f1f5;
+    }
+    .card-body {
+        padding-top: 24px!important;
+    }
+    .latepoint-message.latepoint-message-subtle {
+        padding: 10px 15px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        background: #f9f9f9;
+        color: #8e99bd;
+        border: 2px solid #e7e7ef;
+    }
+    .latepoint-message {
+        border-radius: 6px;
+    }
+    .highlight {
+        color : blue;
+    }
+    .ws-head-w {
+        border-bottom: 1px solid #f0f1f5;
+        margin-top: 1%;
+    }

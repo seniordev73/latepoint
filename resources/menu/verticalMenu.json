@@ -1,0 +1,210 @@
+{
+  "menu": [
+    {
+      "url": "admin/dashboard",
+      "name": "Dashboard",
+      "icon": "menu-icon tf-icons bx bx-pie-chart-alt-2",
+      "slug": "dashboard"
+    },
+    {
+      "url": "admin/calendar",
+      "name": "Calendar",
+      "icon": "menu-icon tf-icons bx bx-calendar",
+      "slug": "pages-calendar"
+    },
+    {
+      "url": "admin/appointments",
+      "name": "Appointment",
+      "icon": "menu-icon tf-icons bx bx-box",
+      "slug": "pages-appointment"
+    },
+    {
+      "url": "admin/payments",
+      "name": "Payments",
+      "icon": "menu-icon tf-icons bx bx-credit-card",
+      "slug": "pages-payments"
+    },
+    {
+      "url": "admin/customers",
+      "name": "Customers",
+      "icon": "menu-icon tf-icons bx bx-user",
+      "slug": "pages-customers"
+    },
+    {
+      "menuHeader": "Resources"
+    },
+    {
+      "name": "Services",
+      "icon": "menu-icon tf-icons bx bx-package",
+      "slug": "pages-services",
+      "submenu": [
+        {
+          "url": "admin/resource/services",
+          "name": "Services",
+          "icon": "menu-icon tf-icons bx bx-package",
+          "slug": "pages-services"
+        },
+        {
+          "url": "admin/resource/categories",
+          "name": "Categories",
+          "icon": "menu-icon tf-icons bx bx-package",
+          "slug": "pages-categories"
+        },
+        {
+          "url": "admin/resource/serviceextras",
+          "name": "Servieces extras",
+          "icon": "menu-icon tf-icons bx bx-package",
+          "slug": "pages-service_extras"
+        }
+      ]
+    },
+    {
+      "url": "admin/resource/agents",
+      "name": "Agents",
+      "icon": "menu-icon tf-icons bx bx-briefcase",
+      "slug": "pages-agents"
+    },
+    {
+      "url": "admin/resource/coupons",
+      "name": "Coupons",
+      "icon": "menu-icon tf-icons bx bx-tag",
+      "slug": "pages-coupons"
+    },
+    {
+      "name": "Locations",
+      "icon": "menu-icon tf-icons bx bx-map-pin",
+      "slug": "pages-locations",
+      "submenu": [
+        {
+          "url": "admin/resource/locations",
+          "name": "All Locations",
+          "icon": "menu-icon tf-icons bx bx-map-pin",
+          "slug": "pages-locations"
+        },
+        {
+          "url": "admin/resource/locationcategories",
+          "name": "Categories",
+          "icon": "menu-icon tf-icons bx bx-package",
+          "slug": "pages-categories"
+        }
+      ]
+    },
+    {
+      "menuHeader": "Settings"
+    },
+    {
+      "url": "admin/settings/general",
+      "name": "Settings",
+      "icon": "menu-icon tf-icons bx bx-cog",
+      "slug": "pages-settings",
+      "submenu": [
+        {
+          "url": "admin/settings/general",
+          "name": "General",
+          "icon": "menu-icon tf-icons bx bx-cog",
+          "slug": "pages-general"
+        },
+        {
+          "url": "admin/settings/schedule",
+          "name": "Schedule",
+          "icon": "menu-icon tf-icons bx bx-cog",
+          "slug": "pages-locations"
+        },
+        {
+          "url": "admin/settings/tax",
+          "name": "Tax",
+          "icon": "menu-icon tf-icons bx bx-cog",
+          "slug": "pages-locations"
+        },
+        {
+          "url": "admin/settings/steps",
+          "name": "Steps",
+          "icon": "menu-icon tf-icons bx bx-cog",
+          "slug": "pages-locations"
+        },
+        {
+          "url": "admin/settings/payments",
+          "name": "Payments",
+          "icon": "menu-icon tf-icons bx bx-cog",
+          "slug": "pages-locations"
+        },
+        {
+          "url": "admin/settings/notifications",
+          "name": "Notifications",
+          "icon": "menu-icon tf-icons bx bx-cog",
+          "slug": "pages-locations"
+        },
+        {
+          "url": "admin/settings/roles",
+          "name": "Roles",
+          "icon": "menu-icon tf-icons bx bx-cog",
+          "slug": "pages-locations"
+        },
+        {
+          "url": "admin/settings/system",
+          "name": "System",
+          "icon": "menu-icon tf-icons bx bx-cog",
+          "slug": "pages-locations"
+        }
+      ]
+    },
+    {
+      "url": "admin/settings/processes",
+      "name": "Processes",
+      "icon": "menu-icon tf-icons bx bx-server",
+      "slug": "pages-processes",
+      "submenu": [
+        {
+          "url": "admin/settings/processes",
+          "name": "Processes",
+          "icon": "menu-icon tf-icons bx bx-server",
+          "slug": "pages-locations"
+        },
+        {
+          "url": "admin/settings/process_jobs",
+          "name": "Scheduled Jobs",
+          "icon": "menu-icon tf-icons bx bx-server",
+          "slug": "pages-categories"
+        },
+        {
+          "url": "admin/settings/activities",
+          "name": "Activity Log",
+          "icon": "menu-icon tf-icons bx bx-server",
+          "slug": "pages-categories"
+        }
+      ]
+    },
+    {
+      "url": "admin/settings/integrations-calendars",
+      "name": "Integrations",
+      "icon": "menu-icon tf-icons bx bx-link",
+      "slug": "pages-integrations",
+      "submenu": [
+        {
+          "url": "admin/settings/integrations-calendars",
+          "name": "Calendars",
+          "icon": "menu-icon tf-icons bx bx-link",
+          "slug": "pages-calendars"
+        },
+        {
+          "url": "admin/settings/integrations-meeting",
+          "name": "Meetings",
+          "icon": "menu-icon tf-icons bx bx-link",
+          "slug": "pages-meeting"
+        },
+        {
+          "url": "admin/settings/integrations-marketing",
+          "name": "Marketing",
+          "icon": "menu-icon tf-icons bx bx-link",
+          "slug": "pages-marketing"
+        }
+      ]
+    },
+    {
+      "url": "admin/settings/form-fields",
+      "name": "Form-fields",
+      "icon": "menu-icon tf-icons bx bx-layer",
+      "slug": "pages-formfields"
+    }
+  ]
+}

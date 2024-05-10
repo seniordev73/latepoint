@@ -1,0 +1,74 @@
+// * Pricing
+// *******************************************************************************
+
+@use '../_bootstrap-extended/include' as light;
+@use '../_bootstrap-extended/include-dark' as dark;
+@import '../_custom-variables/pages';
+
+.pricing-plans-comparison {
+  .table {
+    tr {
+      > th:first-child,
+      > td:first-child {
+        white-space: nowrap;
+        text-align: start;
+      }
+    }
+    tbody {
+      tr:last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}
+.price-yearly-toggle {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+@if $enable-light-style {
+  .light-style {
+    .bg-alt-pricing {
+      background-color: light.$body-bg;
+    }
+    .pricing-free-trial {
+      background-color: light.rgba-to-hex(rgba(light.$primary, 0.08), light.$rgba-to-hex-bg);
+    }
+    .pricing-faqs {
+      background-color: light.rgba-to-hex(rgba(light.$black, 0.08), light.$rgba-to-hex-bg);
+    }
+  }
+}
+
+@if $enable-dark-style {
+  .dark-style {
+    .bg-alt-pricing {
+      background-color: dark.$body-bg;
+    }
+    .pricing-free-trial {
+      background-color: dark.rgba-to-hex(rgba(dark.$primary, 0.08), dark.$card-bg);
+    }
+    .pricing-faqs {
+      background-color: dark.rgba-to-hex(rgba(dark.$gray-500, 0.08), dark.$card-bg);
+    }
+  }
+}
+
+// To position illustration
+@include light.media-breakpoint-up(lg) {
+  .pricing-free-trial {
+    img {
+      position: absolute;
+      bottom: 0;
+      @include app-ltr() {
+        right: 0;
+      }
+      @include app-rtl() {
+        left: 0;
+      }
+    }
+  }
+}

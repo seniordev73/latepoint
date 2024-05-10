@@ -1,0 +1,276 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for  consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+// (C) Custom variables for extended components of bootstrap only
+//
+// ? To change the layout colors you just need to change the $base and $body-bg colors and rest (border, card, font colors and etc...) will be adjust automatically.
+// ? Use https://noeldelgado.github.io/shadowlord/ to select proper 💄 Color tints and shade for $black and $body-bg color.
+// ? color-variables and theme-color-variables (branding colors) can be choose as per your preferences. We suggest you to use https://colors.eva.design/
+// ! Light style use $base to generate the $gray shades.
+// ! _variable-dark.scss file overrides _variable.scss file.
+
+// * Colors
+// *******************************************************************************
+
+// scss-docs-start gray-color-variables
+$white: #fff !default;
+$black: #000 !default;
+
+$base: #7c7db6 !default; // (C)
+$gray-25: rgba($white, 0.015) !default; // (C)
+$gray-50: rgba($white, 0.03) !default; // (C)
+$gray-100: rgba($white, 0.8) !default;
+$gray-200: rgba($white, 0.6) !default;
+$gray-300: rgba($white, 0.4) !default;
+$gray-400: rgba($white, 0.3) !default;
+$gray-500: $base !default;
+$gray-600: rgba($black, 0.1) !default;
+$gray-700: rgba($black, 0.15) !default;
+$gray-800: rgba($black, 0.45) !default;
+$gray-900: rgba($black, 0.65) !default;
+// scss-docs-end gray-color-variables
+
+// scss-docs-start gray-colors-map
+$grays: (
+  '25': $gray-25,
+  '50': $gray-50
+) !default;
+// scss-docs-end gray-colors-map
+
+// scss-docs-start color-variables
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #696cff !default;
+$pink: #e83e8c !default;
+$red: #ff3e1d !default;
+$orange: #fd7e14 !default;
+$yellow: #ffab00 !default;
+$green: #71dd37 !default;
+$teal: #20c997 !default;
+$cyan: #03c3ec !default;
+// scss-docs-end color-variables
+
+// scss-docs-start theme-color-variables
+$primary: $purple !default;
+$secondary: #8592a3 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: #4f505c !default;
+$dark: #6b6c9d !default;
+$gray: $gray-100 !default; // (C)
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'light': $light,
+  'dark': $dark,
+  'gray': $gray
+) !default;
+// scss-docs-end theme-colors-map
+
+$color-scheme: 'dark' !default; // (C)
+
+// * Body
+// *******************************************************************************
+
+$body-bg: #232333 !default;
+$rgba-to-hex-bg: $base !default; // (C)
+$body-color: rgba-to-hex($gray-400, $rgba-to-hex-bg) !default;
+$rgba-to-hex-bg-inverted: rgb(160, 149, 149) !default; // (C)
+
+// * Components
+// *******************************************************************************
+
+// scss-docs-start box-shadow-variables
+$box-shadow: 0 0.25rem 1rem rgba($black, 0.2) !default;
+$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.25) !default;
+$box-shadow-lg: 0 0.625rem 1.25rem rgba($black, 0.3) !default;
+// scss-docs-end box-shadow-variables
+
+// $alert-bg-scale: -84% !default;
+// $alert-border-scale: -40% !default;
+// $alert-color-scale: 0% !default;
+
+$border-color: rgba-to-hex($gray-800, $rgba-to-hex-bg) !default;
+$border-inner-color: rgba($white, 0.09) !default; // (C)
+
+$floating-component-border-color: transparent !default; // (C)
+$floating-component-shadow: $box-shadow !default; // (C)
+
+// * Typography
+// *******************************************************************************
+$headings-color: rgba-to-hex($gray-200, $rgba-to-hex-bg) !default;
+$text-muted: rgba-to-hex($gray-600, $rgba-to-hex-bg) !default;
+$text-muted-hover: rgba-to-hex($white, $rgba-to-hex-bg) !default; // (C)
+
+$text-light: rgba-to-hex($gray-500, $rgba-to-hex-bg) !default; // (C)
+$text-lighter: rgba-to-hex($gray-400, $rgba-to-hex-bg) !default; // (C)
+$text-lightest: rgba-to-hex($gray-300, $rgba-to-hex-bg) !default; // (C)
+
+// * Tables
+// *******************************************************************************
+
+$table-striped-bg-factor: 0.08 !default;
+$table-striped-bg: rgba($gray-500, $table-striped-bg-factor) !default;
+// $table-striped-bg: rgba-to-hex(rgba($gray-500, $table-striped-bg-factor), $rgba-to-hex-bg) !default;
+// $table-striped-bg: rgba-to-hex(rgba($black, $table-striped-bg-factor), $rgba-to-hex-bg) !default;
+
+$table-hover-bg-factor: 0.1 !default;
+$table-hover-bg: rgba($gray-500, $table-hover-bg-factor) !default;
+
+$table-border-factor: 0.4 !default;
+$table-border-color: rgba-to-hex($gray-800, $rgba-to-hex-bg) !default;
+$table-group-separator-color: $table-border-color !default;
+
+$table-bg-scale: -80% !default;
+
+// scss-docs-start table-loop
+$table-variants: (
+  'primary': shift-color($primary, $table-bg-scale),
+  'secondary': shift-color($secondary, $table-bg-scale),
+  'success': shift-color($success, $table-bg-scale),
+  'info': shift-color($info, $table-bg-scale),
+  'warning': shift-color($warning, $table-bg-scale),
+  'danger': shift-color($danger, $table-bg-scale),
+  'light': rgba-to-hex($gray-900, $rgba-to-hex-bg),
+  'dark': $white
+) !default;
+// scss-docs-end table-loop
+
+$component-active-bg: $white !default;
+
+// * Progress bars
+// *******************************************************************************
+$progress-bg: rgba-to-hex($gray-800, $rgba-to-hex-bg) !default;
+
+// * Pagination
+// *******************************************************************************
+
+$pagination-color: $body-color !default;
+$pagination-bg: rgba($gray-500, 0.08) !default;
+
+$pagination-focus-color: $pagination-color !default;
+$pagination-focus-bg: rgba($gray-500, 0.16) !default;
+
+$pagination-hover-color: $pagination-color !default;
+$pagination-hover-bg: rgba($gray-500, 0.16) !default;
+
+$pagination-disabled-color: $text-muted !default;
+$pagination-disabled-bg: rgba($gray-500, 0.04) !default;
+
+// * Cards
+// *******************************************************************************
+
+$card-bg: rgba-to-hex($gray-900, $rgba-to-hex-bg) !default;
+$card-border-color: $border-color !default;
+$card-box-shadow: 0 0.125rem 0.5rem 0 rgba($black, 0.16) !default;
+
+// * Accordion
+// *******************************************************************************
+
+$accordion-bg: $card-bg !default;
+
+$accordion-color: $headings-color !default;
+$accordion-button-color: $accordion-color !default;
+$accordion-button-active-color: $accordion-color !default;
+
+$accordion-icon-color: $accordion-button-color !default;
+$accordion-icon-active-color: $accordion-button-active-color !default;
+
+$accordion-button-icon: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpath id='a' d='m1.532 12 6.182-6-6.182-6L0 1.487 4.65 6 0 10.513z'/%3E%3C/defs%3E%3Cg transform='translate(2.571)' fill='none' fill-rule='evenodd'%3E%3Cuse fill='%23435971' xlink:href='%23a'/%3E%3Cuse fill-opacity='.1' fill='#{$accordion-icon-color}' xlink:href='%23a'/%3E%3C/g%3E%3C/svg%3E%0A") !default;
+$accordion-button-active-icon: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpath id='a' d='m1.532 12 6.182-6-6.182-6L0 1.487 4.65 6 0 10.513z'/%3E%3C/defs%3E%3Cg transform='translate(2.571)' fill='none' fill-rule='evenodd'%3E%3Cuse fill='%23435971' xlink:href='%23a'/%3E%3Cuse fill-opacity='.1' fill='#{$accordion-icon-active-color}' xlink:href='%23a'/%3E%3C/g%3E%3C/svg%3E%0A") !default;
+
+// * Forms
+// *******************************************************************************
+
+$input-bg: $card-bg !default;
+$input-disabled-bg: rgba-to-hex($gray-800, $rgba-to-hex-bg) !default;
+
+$input-border-color: $border-color !default;
+
+$input-placeholder-color: rgba-to-hex($gray-500, $rgba-to-hex-bg) !default;
+$input-border-hover-color: rgba-to-hex($gray-700, $rgba-to-hex-bg) !default; // (C)
+
+$form-switch-color: $input-border-color !default;
+$form-switch-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color}'/></svg>") !default;
+
+$form-select-bg: $input-bg !default;
+
+$form-select-indicator-color: $gray-200 !default;
+$form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>") !default;
+$form-select-indicator-rtl: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>") !default; // (C)
+
+$form-range-track-bg: rgba-to-hex($gray-800, $rgba-to-hex-bg) !default;
+$form-range-track-disabled-bg: $gray-50 !default; // (C)
+
+$form-range-thumb-bg: rgba-to-hex($gray-200, $rgba-to-hex-bg) !default;
+$form-range-thumb-box-shadow: 0 0 6px 0 $gray-200 !default;
+$form-range-thumb-focus-box-shadow: 0 0 8px 0px $gray-200 !default;
+$form-range-thumb-active-bg: $form-range-thumb-bg !default;
+$form-range-thumb-disabled-bg: rgba-to-hex($gray-600, $rgba-to-hex-bg) !default;
+// * Navs
+// *******************************************************************************
+
+$nav-tabs-link-active-bg: $card-bg !default;
+$nav-tabs-border-color: $nav-tabs-link-active-bg !default;
+$nav-tabs-btn-bg-factor: 0.16 !default; // (C)
+$nav-tabs-btn-bg: rgba-to-hex($gray-800, $rgba-to-hex-bg) !default; // (C)
+
+// * Navbar
+// *******************************************************************************
+
+$navbar-light-hover-color: #4e5155 !default;
+$navbar-light-active-color: #4e5155 !default;
+$navbar-light-disabled-color: rgba($black, 0.2) !default;
+
+// * Dropdowns
+// *******************************************************************************
+
+$dropdown-bg: rgba-to-hex(rgba($black, 0.6), $rgba-to-hex-bg) !default;
+$dropdown-divider-bg: $border-color !default;
+
+$dropdown-link-hover-bg: rgba($gray-500, 0.1) !default;
+$dropdown-link-disabled-color: $text-muted !default;
+$dropdown-header-color: $headings-color !default;
+
+// * Popovers
+// *******************************************************************************
+$popover-bg: $card-bg !default;
+// * Toasts
+// *******************************************************************************
+$toast-background-color: $card-bg !default;
+$toast-color: $body-color !default;
+$toast-header-color: $toast-color !default;
+
+// * Modals
+// *******************************************************************************
+
+$modal-content-bg: $card-bg !default;
+$modal-content-box-shadow-xs: 0 0.25rem 2.8125rem 0 rgba($black, 0.3) !default;
+
+// * List group
+// *******************************************************************************
+
+$list-group-border-color: $border-color !default;
+$list-group-item-bg-scale: -70% !default;
+$list-group-item-bg-hover-scale: 10% !default; //  (c)
+$list-group-hover-bg: rgba($base, 0.06) !default;
+$kbd-color: $dark !default;
+
+// Config
+$rtl-support: false !default;
+$dark-style: true !default;
+
+// * Chevron Icons
+// ********************************************************************************
+
+$chevron-up: "data:image/svg+xml,%3Csvg width='10px' height='6px' viewBox='0 0 10 6' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpolygon id='path-1' points='0 4.57961362 1.23882951 5.71428571 5 2.26934419 8.76117049 5.71428571 10 4.57961362 5 0'%3E%3C/polygon%3E%3C/defs%3E%3Cg id='⚙️-Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='31)-DataTables' transform='translate(-289.000000, -64.000000)'%3E%3Cg id='Table-Basic' transform='translate(0.000000, 52.000000)'%3E%3Cg id='Table-Header' transform='translate(19.000000, 10.000000)'%3E%3Cg id='Group' transform='translate(270.000000, 0.000000)'%3E%3Cg id='Icon-Color' transform='translate(0.000000, 2.142857)'%3E%3Cuse fill='#{str-replace(#{rgba-to-hex($gray-500,$rgba-to-hex-bg)},'#', '%23')}' xlink:href='%23path-1'%3E%3C/use%3E%3Cuse fill-opacity='0.5' fill='#{str-replace(#{rgba-to-hex($gray-500,$rgba-to-hex-bg)},'#', '%23')}' xlink:href='%23path-1'%3E%3C/use%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E";
+$chevron-down: "data:image/svg+xml,%3Csvg width='10px' height='6px' viewBox='0 0 10 6' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpolygon id='path-1' points='8.76117049 0 5 3.44494152 1.23882951 0 0 1.1346721 5 5.71428571 10 1.1346721'%3E%3C/polygon%3E%3C/defs%3E%3Cg id='⚙️-Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='31)-DataTables' transform='translate(-289.000000, -76.000000)'%3E%3Cg id='Table-Basic' transform='translate(0.000000, 52.000000)'%3E%3Cg id='Table-Header' transform='translate(19.000000, 10.000000)'%3E%3Cg id='Group' transform='translate(270.000000, 12.000000)'%3E%3Cg id='Icon-Color' transform='translate(0.000000, 2.142857)'%3E%3Cuse fill='#{str-replace(#{rgba-to-hex($gray-500,$rgba-to-hex-bg)},'#', '%23')}' xlink:href='%23path-1'%3E%3C/use%3E%3Cuse fill-opacity='0.8' fill='#{str-replace(#{rgba-to-hex($gray-500,$rgba-to-hex-bg)},'#', '%23')}' xlink:href='%23path-1'%3E%3C/use%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E";

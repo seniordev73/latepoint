@@ -1,0 +1,81 @@
+    .service_title {
+        border-bottom: 5px solid #696cff;
+    }   
+    .card-header {
+        border-bottom: 1px solid #c5c5c5;
+    }
+
+
+    .coupon-use-restrictions {
+        padding: 30px 30px 20px 30px;
+        background-color: #fff7e9;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        border: 1px solid #e8d5b3;
+    }
+    .coupon-restrictions-w h3 {
+        color: #bb8421;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+    #accordionIcon-1 {
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    .add-category-box:hover {
+        border-color: #2652E4;
+        border-style: solid;
+    }
+    .add-category-box {
+        border: 3px dotted rgba(0, 0, 0, 0.1);
+        padding: 13px;
+        border-radius: 6px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .add-category-box .add-coupon-graphic-w {
+        width: 40px;
+        height: 40px;
+        position: relative;
+    }
+    .add-category-box .add-coupon-graphic-w .add-coupon-plus {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        height: 18px;
+        width: 18px;
+        background-color: #2652E4;
+        box-shadow: 0px 0px 0px 10px rgba(189, 214, 252, 0.3);
+        color: #fff;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s cubic-bezier(0.25, 1.4, 0.5, 1.35);
+    }
+    .add-category-box .add-coupon-graphic-w .add-coupon-plus i {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        font-size: 10px;
+        transform: translate(-45%, -47%);
+        transition: all 0.2s ease;
+    }
+    .latepoint-icon {
+        font-family: "latepointadmin" !important;
+        speak: never;
+        font-style: normal;
+        font-weight: 400;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .add-category-box .add-coupon-label {
+        color: #2652E4;
+        font-weight: 500;
+        font-size: 19.2px;
+        transition: all 0.2s cubic-bezier(0.25, 1.4, 0.5, 1.35);
+        margin-left: 15px;
+    }

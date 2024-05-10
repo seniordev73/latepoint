@@ -1,0 +1,151 @@
+// Accordions
+// *******************************************************************************
+
+@each $color, $value in $theme-colors {
+  @if $color != primary {
+    // Mixins of different Advance Styling
+    @include template-accordion-header-variant('.accordion-header-#{$color}', $value);
+  }
+}
+// arrow left
+
+.accordion-arrow-left {
+  .accordion-button.collapsed:focus {
+    box-shadow: none;
+  }
+
+  .accordion-item {
+    border: 0;
+    &.active {
+      box-shadow: none !important;
+    }
+  }
+  .accordion-button {
+    padding: var(--#{$prefix}accordion-btn-padding-y) 0;
+    // Accordion icon
+    &::after {
+      content: '';
+      display: none;
+    }
+    &:not(.collapsed) {
+      color: var(--#{$prefix}accordion-active-color);
+      background-color: var(--#{$prefix}accordion-active-bg);
+      box-shadow: none; // stylelint-disable-line function-disallowed-list
+
+      &::before {
+        background-image: var(--#{$prefix}accordion-btn-active-icon);
+        transform: var(--#{$prefix}accordion-btn-icon-transform);
+      }
+      &::after {
+        background-image: none;
+        transform: none;
+      }
+    }
+    &::before {
+      flex-shrink: 0;
+      width: var(--#{$prefix}accordion-btn-icon-width);
+      height: var(--#{$prefix}accordion-btn-icon-width);
+      margin-left: 0;
+      margin-right: 1.1rem;
+      content: '';
+      background-image: var(--#{$prefix}accordion-btn-icon);
+      background-repeat: no-repeat;
+      background-size: var(--#{$prefix}accordion-btn-icon-width);
+      @include transition(var(--#{$prefix}accordion-btn-icon-transition));
+    }
+  }
+}
+
+// Accordion Popout Variant
+.accordion-popout {
+  .accordion-item {
+    transition: margin 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    &:not(.active) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+.accordion-header + .accordion-collapse .accordion-body {
+  padding-top: 0;
+}
+.accordion {
+  // accordion without icon
+  &.accordion-without-arrow {
+    .accordion-button::after {
+      background-image: none !important;
+    }
+  }
+  // Active accordion box shadow
+  .accordion-item.active {
+    box-shadow: $floating-component-shadow;
+  }
+}
+
+// added box shadow
+.card.accordion-item {
+  box-shadow: $box-shadow-sm;
+}
+
+.accordion-button.collapsed:focus {
+  box-shadow: none;
+}
+.accordion-button {
+  box-shadow: none;
+}
+
+.accordion-header {
+  line-height: 1.54;
+}
+
+.accordion-item {
+  &:not(:first-of-type) {
+    border-top: $accordion-border-width solid $accordion-border-color;
+  }
+}
+
+// Accordion border radius
+.accordion-button {
+  font-weight: inherit;
+  @include border-top-radius($accordion-border-radius);
+  &.collapsed {
+    @include border-radius($accordion-border-radius);
+  }
+}
+
+// Default card styles of accordion
+.accordion > .card:not(:last-of-type) {
+  border-radius: $accordion-border-radius !important;
+  margin-bottom: 0.6875rem;
+}
+
+// RTL
+// *******************************************************************************
+
+@include rtl-only {
+  .accordion-arrow-left {
+    .accordion-button {
+      &::before {
+        margin-left: 1.1rem;
+        margin-right: 0;
+        transform: rotate(180deg);
+      }
+      // !- For RTL accordion icon rotation in other templates
+      &:not(.collapsed)::before {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .accordion-button {
+    text-align: right;
+    &::after {
+      margin-left: 0;
+      margin-right: auto;
+      transform: rotate(180deg);
+    }
+    &:not(.collapsed)::after {
+      transform: rotate(90deg);
+    }
+  }
+}

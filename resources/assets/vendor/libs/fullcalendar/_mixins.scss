@@ -1,0 +1,32 @@
+@mixin fullcalendar-theme($background, $color) {
+  .fc {
+    // FC event
+    @include bg-label-variant('.fc-event-primary:not(.fc-list-event)', $background);
+    .fc-event-primary:not(.fc-list-event) {
+      border-color: rgba($background, 0.15);
+    }
+
+    // FC list event
+    .fc-event-primary.fc-list-event {
+      .fc-list-event-dot {
+        border-color: $background !important;
+      }
+    }
+
+    .fc-button-primary:not(.fc-prev-button):not(.fc-next-button) {
+      background-color: rgba($background, 0.08) !important;
+      border: 0;
+      color: $background;
+      &.fc-button-active,
+      &:hover {
+        background-color: $background !important;
+        border-color: $background !important;
+        color: #fff;
+      }
+
+      &:hover {
+        box-shadow: 0 0.125rem 0.25rem 0 rgba($background, 0.4);
+      }
+    }
+  }
+}

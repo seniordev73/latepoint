@@ -1,0 +1,74 @@
+/*
+* Pages Mixins
+*/
+@import '../../scss/_bootstrap-extended/functions';
+
+@mixin icon-theme($color) {
+  .icon-card.active {
+    outline: 1px solid $color;
+    i,
+    svg {
+      color: $color;
+    }
+  }
+}
+
+// App Chat
+@mixin app-chat-theme($color) {
+  .app-chat {
+    .sidebar-body {
+      .chat-contact-list {
+        li {
+          &.active {
+            background-color: $color;
+          }
+        }
+      }
+    }
+    .app-chat-history {
+      .chat-history {
+        .chat-message {
+          &.chat-message-right {
+            .chat-message-text {
+              background-color: $color !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin front-theme($color) {
+  // Navbar ---------------------
+  .navbar {
+    &.landing-navbar {
+      .navbar-nav {
+        .show > .nav-link,
+        .active > .nav-link,
+        .nav-link.show,
+        .nav-link.active,
+        .nav-link:hover {
+          color: $color !important;
+        }
+      }
+    }
+  }
+
+  // Landing page ---------------------
+  // Useful features
+  .landing-features {
+    .features-icon-wrapper {
+      .features-icon-box {
+        .features-icon {
+          border: 2px solid rgba($color, 0.2);
+        }
+        &:hover {
+          .features-icon {
+            background-color: rgba($color, 0.05);
+          }
+        }
+      }
+    }
+  }
+}

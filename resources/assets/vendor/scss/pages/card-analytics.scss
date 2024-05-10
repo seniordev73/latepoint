@@ -1,0 +1,49 @@
+// * Card Analytics
+// *******************************************************************************
+@use '../_bootstrap-extended/include' as light;
+@use '../_bootstrap-extended/include-dark' as dark;
+@import '../_custom-variables/pages';
+
+// Report list section style
+.report-list {
+  .report-list-item {
+    padding: 0.75rem;
+  }
+  .report-list-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+// Report list section light style
+@if $enable-light-style {
+  .light-style {
+    .report-list {
+      .report-list-item {
+        background-color: light.$body-bg;
+      }
+      .report-list-icon {
+        background-color: light.$card-bg;
+        border-radius: light.$border-radius;
+      }
+    }
+  }
+}
+
+// Report list section dark style
+@if $enable-dark-style {
+  .dark-style {
+    .report-list {
+      .report-list-item {
+        background-color: dark.$body-bg;
+      }
+      .report-list-icon {
+        background-color: dark.$card-bg;
+        border-radius: dark.$border-radius;
+      }
+    }
+  }
+}

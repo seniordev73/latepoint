@@ -1,0 +1,42 @@
+.card {
+    padding: 30px 40px;
+}
+
+.card th {
+    padding: 10px;
+}
+
+.card .header-line {
+    padding: 24px 0;
+}
+
+.card-header-title {
+    padding: 15px 0;
+    margin: 0;
+    font-size: 31px;
+}
+
+.card .top-column {
+    text-align: center;
+    font-size: 12px;
+}
+
+.card .table_list input {
+    padding: 1px 5px;
+    min-width: 100%;
+    border: 1px solid #a5a7b7;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.card .customer-list {
+    font-size: 14px;
+}
+
+.id_search {
+    width: 40px;
+}
+
+.os-scrollable-table-w {
+    overflow: auto;
+}

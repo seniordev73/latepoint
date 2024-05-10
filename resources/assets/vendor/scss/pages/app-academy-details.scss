@@ -1,0 +1,12 @@
+/**
+ * Academy Course courseContent
+ */
+
+.stick-top {
+  position: sticky;
+  bottom: 0;
+  top: calc(10px);
+  &.course-content-fixed {
+    top: calc(70px + 10px);
+  }
+}
